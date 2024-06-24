@@ -23,13 +23,13 @@ export default function ContactUs() {
   }
 
   function getContactInfo() {
-    const UserContactObj={
-      Name:contactname,
-      Email:contactemail,
-      Phone:contactphone,
-      Message:contactmessage,
-    }
-    const UserContactJSON=JSON.stringify(UserContactObj);
+    // const UserContactObj={
+    //   Name:contactname,
+    //   Email:contactemail,
+    //   Phone:contactphone,
+    //   Message:contactmessage,
+    // }
+    // const UserContactJSON=JSON.stringify(UserContactObj);
     
   }
 

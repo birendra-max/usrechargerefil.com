@@ -69,8 +69,8 @@ export default function SignUp({checkData}) {
                                 </div>
                                 <div className="flex -mx-3">
                                     <div className="w-full px-3 mb-5">
-                                        <button onClick={success} className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
-                                        <button onClick={close} className="mt-2 block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold">Cancle</button>
+                                        <button onClick={success} className="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-2 font-semibold">REGISTER NOW</button>
+                                        <button onClick={close} className="mt-2 block w-full max-w-xs mx-auto bg-red-500 hover:bg-red-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-2 font-semibold">Cancle</button>
                                     </div>
                                 </div>
                             </div>

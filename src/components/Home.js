@@ -133,7 +133,7 @@ export default function Home() {
                                         <div className="mt-5 sm:flex sm:items-center">
                                             <input id="q" name="q" className="inline w-full rounded-md border border-gray-300 bg-white py-4 md:py-2 pl-3 pr-3 leading-5 placeholder-gray-500 focus:border-indigo-500 focus:placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-2xl text-black" placeholder="(555)-000-0000" type="number" />
                                             <div className='mt-4 md:mt-1 md:ml-2 md:flex md:justify-center flex justify-center'>
-                                                <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg md:text-xl text-xl px-5 py-4 md:py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex justify-center">Search</button>
+                                                <button className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg md:text-xl text-xl px-5 py-3 md:py-2 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex justify-center">Search</button>
                                                 <button onClick={hide} className=" focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg  md:text-xl text-xl px-5 py-4 md:py-2 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 flex justify-center">Close</button>
                                             </div>
                                         </div>

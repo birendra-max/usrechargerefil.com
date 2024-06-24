@@ -372,24 +372,24 @@ export default function Checkout({ setData }) {
       {/* Network select section  */}
       <div className="mt-8 flex items-center justify-center min-h-screen relative z-10">
         <div
-          className="w-full max-w-[1190px] px-6 sm:px-8 md:px-16 py-10 md:py-20 rounded-xl bg-[blue]/20 min-h-[300px] m-2 shadow-[0px_14px_28px_-5px_rgba(100,0,0,0.21)]">
-          <h1 className="font-semibold md:text-2xl text-sx mb-2 tracking-wider drop-shadow-[3px_3px_5px_rgba(91,91,91,0.58)]">
+          className="w-full max-w-[1190px] px-2 sm:px-8 md:px-16 py-10 md:py-20 rounded-xl bg-[blue]/20 min-h-[300px] m-2 shadow-[0px_14px_28px_-5px_rgba(100,0,0,0.21)]">
+          <h1 className="font-semibold md:text-2xl text-xl px-4 mb-2 tracking-wider drop-shadow-[3px_3px_5px_rgba(91,91,91,0.58)]">
             Billing address
           </h1>
           <div className="font-sans">
             <div className="flex max-sm:flex-col gap-4 h-full">
               <div className="max-w-4xl mx-auto w-full h-max rounded-md p-4 sticky top-0">
+                <button
+                  className="float-right cursor-pointer inline-flex items-center border border-indigo-300 px-3 py-1.5 rounded-md hover:bg-indigo-900 hover:text-white bottom-2" onClick={prev}>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
+                    <path strokeLinecap="round" strokeLinejoin="round 2" d="M7 16l-4-4m0 0l4-4m-4 4h18">
+                    </path>
+                  </svg>
+                  <span className="ml-1 font-bold text-lg">Back</span>
+                </button>
                 <div>
-                  <h3 className="text-base font-semibold mb-4 flex justify-around items-center">
+                  <h3 className="text-base font-semibold mb-4 flex justify-left items-center">
                     Personal Details
-                    <button
-                      className=" float-right cursor-pointer inline-flex items-center border border-indigo-300 px-3 py-1.5 rounded-md hover:bg-indigo-900 hover:text-white" onClick={prev}>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                        <path strokeLinecap="round" strokeLinejoin="round 2" d="M7 16l-4-4m0 0l4-4m-4 4h18">
-                        </path>
-                      </svg>
-                      <span className="ml-1 font-bold text-lg">Back</span>
-                    </button>
                   </h3>
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="relative flex items-center">
