@@ -44,7 +44,7 @@ export default function Nav() {
         <header id="header">
           <div id="logo">
             <h1 id="siteName">
-              <span>USRECHARGEREFILL</span>.COM
+              <span>RECHARGE</span>.COM
             </h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
