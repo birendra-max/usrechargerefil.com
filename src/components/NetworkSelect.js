@@ -1,6 +1,18 @@
 import React from 'react';
+import Att from './img/ATT.png';
+import boostMobile from './img/booster.png';
+import cricketWireless from './img/cricketwireless.png';
+import tMobile from './img/Tmobile.webp';
+import simpleMobile from './img/simpleMobile.jpeg';
+import metro from './img/Metro.jpg';
+import ultraMobile from './img/ultramobile.jpg';
+import net10 from './img/net10.png';
+import h2o from './img/h2o.png';
+import verizon from './img/verizon.jpg';
 
-export default function NetworkSelect({setData}) {
+
+
+export default function NetworkSelect({ setData }) {
     let currentStep1 = 0;
     function changestep(NetworkName) {
         currentStep1 = 1;
@@ -25,7 +37,7 @@ export default function NetworkSelect({setData}) {
                             <img
                                 onClick={() => changestep('AT & T MOBILE')} alt="AT & T PREPAID"
                                 className="cursor-pointer block h-full w-full rounded-lg object-cover object-center"
-                                src="https://i0.wp.com/tmo.report/wp-content/uploads/2024/01/ATT.png?fit=2100%2C1182&ssl=1" />
+                                src={Att} />
                         </div>
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
                             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-violet-600 transition-all duration-700 group-hover:w-full"></span>
@@ -35,7 +47,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep('BOOST MOBILE')}
                                 alt="BOOST MOBILE"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://www.freeiconspng.com/uploads/boost-mobile-png-18.png" />
+                                src={boostMobile} />
                         </div>
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
                             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-violet-600 transition-all duration-700 group-hover:w-full"></span>
@@ -45,7 +57,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep('CRECKET WIRELESS')}
                                 alt="CRECKET WIRELESS"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://i.redd.it/34syoxsx5zk51.png" />
+                                src={cricketWireless} />
                         </div>
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
                             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-violet-600 transition-all duration-700 group-hover:w-full"></span>
@@ -55,7 +67,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep("T MOBILE")}
                                 alt="T MOBILE"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://mobilityarena.com/wp-content/uploads/2022/03/Tmobile-phone-service-review.jpg" />
+                                src={tMobile} />
                         </div>
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
                             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-violet-600 transition-all duration-700 group-hover:w-full"></span>
@@ -65,7 +77,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep("SAMPLE MOBILE")}
                                 alt="SAMPLE MOBILE"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRcIt2r7bFIqyBwPJdnHL0XzXtJCD3K2b5wCXTQsCD5i38n_gOkZIvP0Pp5a1WBABE2gE&usqp=CAU" />
+                                src={simpleMobile} />
                         </div>
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
                             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-violet-600 transition-all duration-700 group-hover:w-full"></span>
@@ -75,7 +87,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep("METRO BY T MOBILE")}
                                 alt="METRO BY T MOBILE"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://www.t-mobile.com/news/_admin/uploads/2020/04/Metro-by-T-Mobile_New_Logo_Secondary_RGB_W-on-DP.jpg" />
+                                src={metro} />
                         </div>
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
                             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-violet-600 transition-all duration-700 group-hover:w-full"></span>
@@ -85,7 +97,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep("ULTRA MOBILE")}
                                 alt="ULTRA MOBILE"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://cdn.mos.cms.futurecdn.net/JnP4nhY9wDroQ6GSFzkL55-1200-80.jpg" />
+                                src={ultraMobile} />
                         </div>
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
                             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-violet-600 transition-all duration-700 group-hover:w-full"></span>
@@ -95,7 +107,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep("NET10 WIRELESS")}
                                 alt="NET10 WIRELESS"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://recommerce-static.recharge.com/media/cache/product_card/9f/07/6be4b0477e40a6230c0c71632e00.png" />
+                                src={net10} />
                         </div>
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
                             <span className="ease absolute left-0 top-0 h-0 w-0 border-t-4 border-violet-600 transition-all duration-700 group-hover:w-full"></span>
@@ -105,7 +117,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep("H20 WIRELESS")}
                                 alt="H20 WIRELESS"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://www.bitrefill.com/content/cn/b_rgb%3Affe700%2Cc_pad%2Ch_720%2Cw_1280/v1559632057/h2o.webp" />
+                                src={h2o} />
                         </div>
 
                         <div className='h-44 md:h-58 group relative inline-block overflow-hidden rounded font-medium text-slate-800 hover:text-indigo-600 focus:outline-none focus:ring active:bg-indigo-600 hover:p-1'>
@@ -116,7 +128,7 @@ export default function NetworkSelect({setData}) {
                             <img onClick={() => changestep("VERIZON")}
                                 alt="VERIZON"
                                 className="block h-full w-full rounded-lg object-cover object-center cursor-pointer"
-                                src="https://i.ytimg.com/vi/0nU7VvDd4OI/hqdefault.jpg" />
+                                src={verizon} />
                         </div>
                     </div>
                 </div>
