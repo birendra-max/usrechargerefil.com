@@ -1,31 +1,76 @@
 import React, { useState } from 'react'
-
+import $ from 'jquery';
 export default function SignUp({ checkData }) {
-
-    const [formData, setFormData] = useState(
-        {
-            fname: "",
-            lname: "",
-            email: "",
-            pass_w: ""
-        }
-    );
+    const [fname, setFname] = useState('');
+    const [lname, setLname] = useState('');
+    const [email, setEmail] = useState('');
+    const [pass_w, setPass] = useState('');
 
     function close() {
         checkData(0);
     }
 
     function success() {
+        const mydata = {};
+
+        if (fname === '') {
+            document.getElementById('fname').style.border = "1px solid red";
+            document.getElementById('fname').focus();
+            return;
+        }
+        else {
+            mydata.fname = fname;
+            document.getElementById('fname').style.border = "1px solid green";
+        }
+        if (lname === '') {
+            document.getElementById('lname').style.border = "1px solid red";
+            document.getElementById('lname').focus();
+            return
+        }
+        else {
+            mydata.lname = lname;
+            document.getElementById('lname').style.border = "1px solid green";
+        }
+
+        if (email === '') {
+            document.getElementById('email').style.border = "1px solid red";
+            document.getElementById('email').focus();
+            return
+        }
+        else {
+            console.log(email.indexOf("@"));
+            if (email.indexOf("@") > 0) {
+                document.getElementById('email').style.border = "1px solid green";
+                mydata.email = email;
+            }
+            else {
+                document.getElementById('email').style.border = "1px solid red";
+                document.getElementById('email').focus();
+                alert('plz enter valid email')
+                return;
+            }
+        }
+
+        if (pass_w === '') {
+            document.getElementById('pass').style.border = "1px solid red";
+            document.getElementById('pass').focus();
+            return;
+        }
+        else {
+            document.getElementById('pass').style.border = "1px solid green";
+            mydata.pass_w = pass_w;
+        }
         checkData(1);
     }
 
-    const hendalData = (event) => {
-        const { name, value } = event.target
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value 
-        }));
-    }
+    $('signUpform').validate({
+        rules:{
+            
+        }
+    })
+
+
+    
 
 
     return (
@@ -38,7 +83,7 @@ export default function SignUp({ checkData }) {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
             </svg>
 
-            <div className="md:mt-8 mt-6 fixed grid place-items-center max-h-screen backdrop-blur-sm top-0 right-0 left-0 z-50 w-full inset-2 h-modal h-full justify-center items-center text-white bg-[black]/100 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-right bg-cover">
+            <div id='signUpform' className="md:mt-8 mt-6 fixed grid place-items-center max-h-screen backdrop-blur-sm top-0 right-0 left-0 z-50 w-full inset-2 h-modal h-full justify-center items-center text-white bg-[black]/100 bg-[url('https://pagedone.io/asset/uploads/1691055810.png')] bg-right bg-cover">
                 <div className="bg-gray-100 text-black rounded-3xl shadow-xl w-full overflow-hidden" style={{ maxWidth: "1000px" }}>
                     <div className="md:flex w-full">
                         <div className="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
@@ -49,20 +94,20 @@ export default function SignUp({ checkData }) {
                                 <h1 className="font-bold text-3xl text-gray-900">REGISTER</h1>
                                 <p>Enter your information to register</p>
                             </div>
-                            <div onSubmit={hendalData} id='signupform'>
+                            <div id='signupform'>
                                 <div className="flex -mx-3">
                                     <div className="w-1/2 px-3 mb-5">
                                         <label htmlFor="" className="text-xs font-semibold px-1">First name</label>
                                         <div className="flex">
                                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                            <input type="text" value={fname} onSubmit={ } name='fname' className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="John" />
+                                            <input type="text" id='fname' value={fname} onChange={(e) => { setFname(e.target.value) }} name='fname' className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="John" />
                                         </div>
                                     </div>
                                     <div className="w-1/2 px-3 mb-5">
                                         <label htmlFor="" className="text-xs font-semibold px-1">Last name</label>
                                         <div className="flex">
                                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                            <input type="text" name="lname" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Smith" />
+                                            <input type="text" id='lname' value={lname} onChange={(e) => { setLname(e.target.value) }} name="lname" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Smith" />
                                         </div>
                                     </div>
                                 </div>
@@ -71,7 +116,7 @@ export default function SignUp({ checkData }) {
                                         <label htmlFor="" className="text-xs font-semibold px-1">Email</label>
                                         <div className="flex">
                                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-email-outline text-gray-400 text-lg"></i></div>
-                                            <input type="email" name="email" className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="johnsmith@example.com" />
+                                            <input type="email" value={email} onChange={(e) => { setEmail(e.target.value) }} name="email" id='email' className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="johnsmith@example.com" />
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +125,7 @@ export default function SignUp({ checkData }) {
                                         <label htmlFor="" className="text-xs font-semibold px-1">Password</label>
                                         <div className="flex">
                                             <div className="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i className="mdi mdi-lock-outline text-gray-400 text-lg"></i></div>
-                                            <input type="password" name='pass_w' className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************" />
+                                            <input type="password" value={pass_w} onChange={(e) => { setPass(e.target.value) }} name='pass_w' id='pass' className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************" />
                                         </div>
                                     </div>
                                 </div>

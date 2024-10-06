@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
-export default function NetworkPlanes({setData}) {
+export default function NetworkPlanes({ setData }) {
     const [inputValue, setInputValue] = useState('');
+    // const [plans, setPlans] = useState(5);
     function hide() {
         setInputValue("");
         document.getElementById('mypopupform').style.display = 'none';
