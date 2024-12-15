@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/USRECHARGEREFILL.COM/static/css/main.4374244f.css",
+    "main.js": "/USRECHARGEREFILL.COM/static/js/main.5a7d5241.js",
+    "static/js/453.415703af.chunk.js": "/USRECHARGEREFILL.COM/static/js/453.415703af.chunk.js",
+    "static/media/ATT.png": "/USRECHARGEREFILL.COM/static/media/ATT.5fd0d1769a33add53d24.png",
+    "static/media/net10.png": "/USRECHARGEREFILL.COM/static/media/net10.05a9f0501f1a807a15fc.png",
+    "static/media/h2o.png": "/USRECHARGEREFILL.COM/static/media/h2o.933aa699243b1c66a1d1.png",
+    "static/media/cricketwireless.png": "/USRECHARGEREFILL.COM/static/media/cricketwireless.bc6809707affbed7c221.png",
+    "static/media/booster.png": "/USRECHARGEREFILL.COM/static/media/booster.dde681325233dcfcb69b.png",
+    "static/media/ultramobile.jpg": "/USRECHARGEREFILL.COM/static/media/ultramobile.27f9f06b907c26176a15.jpg",
+    "static/media/Metro.jpg": "/USRECHARGEREFILL.COM/static/media/Metro.fe207556fab904f2b4f5.jpg",
+    "static/media/Tmobile.webp": "/USRECHARGEREFILL.COM/static/media/Tmobile.d5739de76ab24cc5fe70.webp",
+    "index.html": "/USRECHARGEREFILL.COM/index.html",
+    "main.4374244f.css.map": "/USRECHARGEREFILL.COM/static/css/main.4374244f.css.map",
+    "main.5a7d5241.js.map": "/USRECHARGEREFILL.COM/static/js/main.5a7d5241.js.map",
+    "453.415703af.chunk.js.map": "/USRECHARGEREFILL.COM/static/js/453.415703af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4374244f.css",
+    "static/js/main.5a7d5241.js"
+  ]
+}
